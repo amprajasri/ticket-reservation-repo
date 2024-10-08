@@ -113,7 +113,7 @@ app.post('/api/book', (req, res) =>
   });
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
   
@@ -125,3 +125,6 @@ app.get('/', (request, response) => {
     console.log(request);
     return response.status(234).send('Welcome To MERN Stack Tutorial');
   });
+
+
+  module.exports = app;

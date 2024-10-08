@@ -1,10 +1,5 @@
-const { Pool } = require('@vercel/postgres');
-
-const pool = new Pool({
-  connectionString: process.env.POSTGRES_URL,
-});
+const { sql } = require('@vercel/postgres');
 
 module.exports = {
-  query: (text, params) => pool.query(text, params),
+  query: (text, params) => sql.query(text, params),
 };
-module.exports=pool
