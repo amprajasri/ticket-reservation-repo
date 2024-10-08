@@ -1,6 +1,7 @@
 // File: server.js
 const express = require('express');
 const cors = require('cors');
+const db=require('./db');
 
 const app = express();
 app.use(cors());
@@ -13,7 +14,7 @@ app.use(express.json());
 //   database: 'train_reservation'
 // });
 
-const db=require('./db')
+
 
 db.connect((err) => {
   if (err) {
