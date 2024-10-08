@@ -14,7 +14,7 @@ function App() {
 
   const fetchSeats = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/api/seats');
+      const response = await axios.get('https://ticket-reservation-repo-server.vercel.app/seats');
       setSeats(response.data);
     } catch (error) {
       console.error('Error fetching seats:', error);
@@ -23,7 +23,7 @@ function App() {
 
   const bookSeats = async () => {
     try {
-      const response = await axios.post('http://localhost:3001/api/book', { numSeats });
+      const response = await axios.post('https://ticket-reservation-repo-server.vercel.app/book', { numSeats });
       setMessage(`Booked seats: ${response.data.bookedSeats.map(seat => `${seat.row_num}-${seat.seat_num}`).join(', ')}`);
       fetchSeats();
     } catch (error) {
