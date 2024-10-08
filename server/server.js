@@ -64,7 +64,7 @@ app.post('/book', (req, res) =>
     return;
   }
 
-  db.query('SELECT * FROM seats WHERE isBooked = 0 ORDER BY row_num, seat_num', (err, availableSeats) => {
+  db.query('SELECT * FROM seats WHERE isBooked = FALSE ORDER BY row_num, seat_num;', (err, availableSeats) => {
     if (err) {
       res.status(500).json({ error: 'Error fetching available seats' });
       return;
@@ -97,7 +97,7 @@ app.post('/book', (req, res) =>
 
     const updatePromises = bookedSeats.map(seat =>
       new Promise((resolve, reject) => {
-        db.query('UPDATE seats SET isBooked = 1 WHERE id = ?', [seat.id], (err) => {
+        db.query('UPDATE seats SET isBooked = true WHERE id = ?', [seat.id], (err) => {
           if (err) reject(err);
           else resolve();
         });
