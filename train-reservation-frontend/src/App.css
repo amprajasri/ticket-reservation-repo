@@ -1,0 +1,54 @@
+/* File: App.css */
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.outer_box{
+  border: solid 1px paleturquoise;
+  background-color: aqua;
+}
+.seat-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #101010;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.available {
+  background-color: #90EE90;
+}
+
+.booked {
+  background-color: #FF6347;
+  color: white;
+}
+
+input {
+  margin-right: 10px;
+  padding: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
