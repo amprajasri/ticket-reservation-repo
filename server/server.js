@@ -27,7 +27,7 @@ app.use(express.json());
 
 
 // API endpoint to get all seats
-app.get('/api/seats', (req, res) => {
+app.get('/seats', (req, res) => {
   db.query('SELECT * FROM seats', (err, results) => {
     if (err) {
       res.status(500).json({ error: 'Error fetching seats' });
@@ -54,7 +54,7 @@ app.get('/api/seats', (req, res) => {
 });
 
 // API endpoint to book seats
-app.post('/api/book', (req, res) => 
+app.post('/book', (req, res) => 
   {
   const { numSeats } = req.body;
  
