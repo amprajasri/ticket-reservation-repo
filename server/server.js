@@ -14,7 +14,7 @@ app.use(express.json());
 //   database: 'train_reservation'
 // });
 
-require('./db')
+const db=require('./db')
 
 db.connect((err) => {
   if (err) {
