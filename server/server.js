@@ -42,7 +42,8 @@ app.get('/seats', (req, res) => {
         break
       }
       for(j=0;j<7;j++){ 
-        row.push(results.shift())
+        temp=results.shift()
+        row.push(temp)
       }
       final.push(row)
       
