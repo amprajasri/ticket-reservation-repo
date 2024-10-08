@@ -1,4 +1,4 @@
-const { Pool } = require('@vercel/postgres');
+const { Pool } = require('pg');
 
 const pool = new Pool({
   connectionString: process.env.POSTGRES_URL,
@@ -7,3 +7,4 @@ const pool = new Pool({
 module.exports = {
   query: (text, params) => pool.query(text, params),
 };
+module.exports=pool
