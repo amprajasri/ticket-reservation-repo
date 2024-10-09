@@ -74,7 +74,7 @@ app.post('/book', (req, res) =>
     const bookedSeats = [];
     let remainingSeats = numSeats;
     //availableSeats will contain array of objects these objects are rows in table "seats" every row which satisfy condition isBooked=false is returned as an object 
-    for (let i = 0; i < availableSeats.length && remainingSeats > 0; i++) 
+    for (let i = 0; i < availableSeats.rowCount && remainingSeats > 0; i++) 
       {
       const currentRow = availableSeats[i].row_num;
       console.log("inside for loop",currentRow)
