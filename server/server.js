@@ -86,11 +86,11 @@ app.post('/book', (req, res) =>
       
     }
 
-    if (remainingSeats > 0 && availableSeats.length!=0) {
-      res.status(400).json({ error: 'required number of seats are not available in same row,but you can book seperately if required' });
-      return;
-    }
-    else if (remainingSeats > 0 && availableSeats.length===0) {
+    // if (remainingSeats > 0 && availableSeats.length!=0) {
+    //   res.status(400).json({ error: 'required number of seats are not available in same row,but you can book seperately if required' });
+    //   return;
+    // }
+    if (remainingSeats > 0 && availableSeats.length===0) {
       res.status(400).json({ error: 'sorry!! all seats are booked' });
       return;
     }
