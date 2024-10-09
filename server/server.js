@@ -28,6 +28,7 @@ app.use(express.json());
 
 // API endpoint to get all seats
 app.get('/seats', (req, res) => {
+  console.log("before")
   db.query('SELECT * FROM seats', (err, results) => {
     if (err) {
       res.status(500).json({ error: 'Error fetching seats' });
@@ -48,7 +49,7 @@ app.get('/seats', (req, res) => {
     //   final.push(row)
       
     // }
-    // console.log(final)
+    console.log("hiiiia123")
     res.json(results);
    
   });
@@ -85,6 +86,7 @@ app.post('/book', (req, res) =>
       } 
       
     }
+    console.log("hiiii")
 
     // if (remainingSeats > 0 && availableSeats.length!=0) {
     //   res.status(400).json({ error: 'required number of seats are not available in same row,but you can book seperately if required' });
@@ -117,7 +119,7 @@ app.post('/book', (req, res) =>
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-  
+  console.log("hiii")
 });
 
 
@@ -125,6 +127,7 @@ app.listen(PORT, () => {
 app.get('/', (request, response) => {
     console.log(request);
     return response.status(234).send('Welcome To MERN Stack Tutorial');
+    
   });
 
 
