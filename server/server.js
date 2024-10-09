@@ -50,7 +50,9 @@ app.get('/seats', (req, res) => {
       
     }
     console.log("hiiiia123")
+    
     res.json(final);
+    console.log(res)
    
   });
 });
