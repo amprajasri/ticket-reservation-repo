@@ -86,7 +86,7 @@ app.post('/book', (req, res) =>
       } 
       
     }
-    console.log("hiiii")
+    console.log(remainingSeats)
 
     // if (remainingSeats > 0 && availableSeats.length!=0) {
     //   res.status(400).json({ error: 'required number of seats are not available in same row,but you can book seperately if required' });
