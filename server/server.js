@@ -38,7 +38,7 @@ app.get('/seats', (req, res) => {
     for(i =1;i<=12;i++){
       row=[]
       if(i==12){
-        row.push(...results)
+        row.push(...results.rows)
         final.push(row)
         break
       }
