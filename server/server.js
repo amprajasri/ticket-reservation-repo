@@ -29,7 +29,7 @@ app.use(express.json());
 // API endpoint to get all seats
 app.get('/seats', (req, res) => {
   console.log("before")
-  db.query('SELECT * FROM seats', (err, results) => {
+  db.query('SELECT * FROM seats order by id', (err, results) => {
     if (err) {
       res.status(500).json({ error: 'Error fetching seats' });
       return;
