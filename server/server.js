@@ -78,7 +78,7 @@ app.post('/book', (req, res) =>
     //availableSeats will contain array of objects these objects are rows in table "seats" every row which satisfy condition isBooked=false is returned as an object 
     for (let i = 0; i < availableSeats.rowCount && remainingSeats > 0; i++) 
       {
-      const currentRow = availableSeats[i].row_num;
+      const currentRow = availableSeats.rows[i].row_num;
       console.log("inside for loop",currentRow)
       //objects in availableSeats(array) will be iteratively passed through the filter function only objects whose row num is satisfied will be stored in array  
       const seatsInCurrentRow = availableSeats.filter(seat => seat.row_num === currentRow );
