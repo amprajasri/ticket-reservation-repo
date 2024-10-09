@@ -70,7 +70,7 @@ app.post('/book', (req, res) =>
       res.status(500).json({ error: 'Error fetching available seats' });
       return;
     }
-    
+    console.log(availableSeats)
     const bookedSeats = [];
     let remainingSeats = numSeats;
     //availableSeats will contain array of objects these objects are rows in table "seats" every row which satisfy condition isBooked=false is returned as an object 
