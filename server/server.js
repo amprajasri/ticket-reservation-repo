@@ -86,6 +86,7 @@ app.post('/book', (req, res) =>
       } 
       
     }
+    console.log("hiii")
     console.log(remainingSeats)
 
     // if (remainingSeats > 0 && availableSeats.length!=0) {
