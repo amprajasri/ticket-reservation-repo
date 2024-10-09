@@ -31,8 +31,44 @@ function App() {
     }
   };
 
+  // return (
+  //   <div className="App">
+  //     <h1>Train Seat Reservation</h1>
+  //     <div>
+  //       <input
+  //         type="number"
+  //         min="1"
+  //         max="7"
+  //         value={numSeats}
+  //         onChange={(e) => setNumSeats(parseInt(e.target.value))}
+  //       />
+  //       <button onClick={bookSeats}>Book Seats</button>
+  //     </div>
+  //     <p>{message}</p>
+  //     <div className='outer_box'>
+  //       {rows.map((row)=>
+  //     <div className="seat-layout">
+  //       {row.map((seat) => 
+  //       (
+          
+  //         <div
+  //           key={`${seat.row_num}-${seat.seat_num}`}
+  //           className={`seat ${seat.isBooked ? 'booked' : 'available'}`}
+  //         >
+  //           {seat.row_num}-{seat.seat_num}
+  //         </div>
+          
+          
+
+  //      ))}
+  //     </div>
+  //        ) }
+  //     </div>
+  //   </div>
+  // );
+
   return (
-    <div className="App">
+  <div className="App">
       <h1>Train Seat Reservation</h1>
       <div>
         <input
@@ -46,9 +82,9 @@ function App() {
       </div>
       <p>{message}</p>
       <div className='outer_box'>
-        {rows.map((row)=>
+        
       <div className="seat-layout">
-        {row.map((seat) => 
+        {rows.map((seat) => 
         (
           
           <div
@@ -62,10 +98,11 @@ function App() {
 
        ))}
       </div>
-         ) }
+         
       </div>
     </div>
   );
+
 }
 
 export default App;
