@@ -34,23 +34,23 @@ app.get('/seats', (req, res) => {
       res.status(500).json({ error: 'Error fetching seats' });
       return;
     }
-    // final=[]
-    // for(i =1;i<=12;i++){
-    //   row=[]
-    //   if(i==12){
-    //     row.push(...results)
-    //     final.push(row)
-    //     break
-    //   }
-    //   for(j=0;j<7;j++){ 
-    //     temp=results.shift()
-    //     row.push(temp)
-    //   }
-    //   final.push(row)
+    final=[]
+    for(i =1;i<=12;i++){
+      row=[]
+      if(i==12){
+        row.push(...results)
+        final.push(row)
+        break
+      }
+      for(j=0;j<7;j++){ 
+        temp=results.rows.shift()
+        row.push(temp)
+      }
+      final.push(row)
       
-    // }
+    }
     console.log("hiiiia123")
-    res.json(results);
+    res.json(final);
    
   });
 });
