@@ -67,47 +67,11 @@ function App() {
     </div>
   );
 
-  return (
-    
-  <div className="App">
-    <div><h1>hiii</h1></div> 
-      <h1>Train Seat Reservation</h1>
-      <div>
-        <input
-          type="number"
-          min="1"
-          max="7"
-          value={numSeats}
-          onChange={(e) => setNumSeats(parseInt(e.target.value))}
-        />
-        <button onClick={bookSeats}>Book Seats</button>
-      </div>
-      <p>{message}</p>
-      <div className='outer_box'>
-        
-      <div className="seat-layout">
-        {rows.map((seat) => 
-        (
-          
-          <div
-            key={`${seat.row_num}-${seat.seat_num}`}
-            className={`seat ${seat.isBooked ? 'booked' : 'available'}`}
-          >
-            {seat.row_num}-{seat.seat_num}
-          </div>
-          
-          
-
-       ))}
-      </div>
-         
-      </div>
-    </div>
-  );
+  
 
 }
 
-// export default App;
+export default App;
 
 // import React, { useState, useEffect } from 'react';
 // import axios from 'axios';
