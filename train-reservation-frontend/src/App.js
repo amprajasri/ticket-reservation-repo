@@ -53,7 +53,7 @@ function App() {
           
           <div
             key={`${seat.row_num}-${seat.seat_num}`}
-            className={`seat ${seat.isBooked==false ? 'booked' : 'available'}`}
+            className={`seat ${seat.isbooked ? 'booked' : 'available'}`}
           >
             {seat.row_num}-{seat.seat_num}
           </div>
