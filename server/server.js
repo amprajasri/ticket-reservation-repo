@@ -52,7 +52,7 @@ app.get('/seats', (req, res) => {
     console.log("hiiiia123")
     
     res.json(final);
-    console.log("response is",res)
+    console.log("response is",final)
    
   });
 });
