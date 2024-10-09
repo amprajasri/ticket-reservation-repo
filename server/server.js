@@ -79,7 +79,7 @@ app.post('/book', (req, res) =>
       const currentRow = availableSeats[i].row_num;
       //objects in availableSeats(array) will be iteratively passed through the filter function only objects whose row num is satisfied will be stored in array  
       const seatsInCurrentRow = availableSeats.filter(seat => seat.row_num === currentRow );
-
+      console.log(seatsInCurrentRow)
       if (seatsInCurrentRow.length >= remainingSeats) {
         bookedSeats.push(...seatsInCurrentRow.slice(0, remainingSeats));
         remainingSeats = 0;
