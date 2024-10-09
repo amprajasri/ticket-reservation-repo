@@ -103,8 +103,8 @@ app.post('/book', (req, res) =>
 
     const updatePromises = bookedSeats.map(seat =>
       new Promise((resolve, reject) => {
-        console.log('UPDATE seats SET isBooked = true WHERE id =${seat.id}')
-        db.query('UPDATE seats SET isBooked = true WHERE id =${seat.id}',  (err) => {
+        console.log(`UPDATE seats SET isBooked = true WHERE id =(${seat.id})`)
+        db.query(`UPDATE seats SET isBooked = true WHERE id =(${seat.id})`,  (err) => {
           if (err) reject(err);
           else resolve();
         });
